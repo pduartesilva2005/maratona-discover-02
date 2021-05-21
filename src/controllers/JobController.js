@@ -7,13 +7,8 @@ module.exports = {
     return response.render("job");
   },
 
-  save(request, response) {
-    const jobs = Job.get();
-
-    const lastId = jobs[jobs.length - 1] ? jobs[jobs.length - 1].id : 0;
-
-    Job.create({
-      id: lastId + 1,
+  async save(request, response) {
+    await Job.create({
       name: request.body.name,
       "daily-hours": request.body["daily-hours"],
       "total-hours": request.body["total-hours"],
@@ -23,9 +18,9 @@ module.exports = {
     return response.redirect("/");
   },
 
-  show(request, response) {
-    const jobs = Job.get();
-    const profile = Profile.get();
+  async show(request, response) {
+    const jobs = await Job.get();
+    const profile = await Profile.get();
 
     const jobId = request.params.id;
 
@@ -40,41 +35,24 @@ module.exports = {
     return response.render("job-edit", { job });
   },
 
-  update(request, response) {
-    const jobs = Job.get();
-
+  async update(request, response) {
     const jobId = request.params.id;
 
-    const job = jobs.find((job) => Number(job.id) === Number(jobId));
-
-    if (!job) {
-      return response.send("Job not found");
-    }
-
     const updatedJob = {
-      ...job,
       name: request.body.name,
       "total-hours": request.body["total-hours"],
       "daily-hours": request.body["daily-hours"],
     };
 
-    const newJobs = jobs.map((job) => {
-      if (Number(job.id) === Number(jobId)) {
-        job = updatedJob;
-      }
-
-      return job;
-    });
-
-    Job.update(newJobs);
+    await Job.update(updatedJob, jobId);
 
     return response.redirect("/job/" + jobId);
   },
 
-  delete(request, response) {
+  async delete(request, response) {
     const jobId = request.params.id;
 
-    Job.delete(jobId);
+    await Job.delete(jobId);
 
     return response.redirect("/");
   },
