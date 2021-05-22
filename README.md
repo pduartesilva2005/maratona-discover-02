@@ -5,7 +5,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-executar">Como executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#memo-licença">Licença</a>
 </p>
 
@@ -37,9 +37,17 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer, onde é possível cadastrar e excluir jobs (projetos), obtendo uma estimativa de custo de cada job. Além disso, é possível traçar o valor da hora da pessoa que estará usando o sistema 💰
 
-## 🔖 Layout
+## 🔥 Como executar
 
-Você pode visualizar o layout do projeto através [desse link](https://www.figma.com/file/s4fytPFbDiSkv4GPSfKaLE/Jobs-Planning). É necessário ter conta no [Figma](https://figma.com) para acessá-lo.
+Para começar executar esse projeto você precisa ter o Node.js e o Git instalado na suá maquina
+
+- 1 - Clone esse repositório `git clone https://github.com/maratona-discover-02.git`;
+- 2 - Instalar as Dependências com `yarn` ou `npm install`;
+- 3 - Iniciar o Banco de Dados `yarn db:init` ou `npm run db:init`;
+- 4 - Rodar o projeto rodando esse comandos `yarn dev` ou `npm run dev`
+- 5 - Você pode a aplicação por este endereço `http://localhost:3333`;
+
+Obs: Caso não você queira baixar pelo Git, você baixar esse arquivo .zip [download link](https://github.com/pedroduarte2005/maratona-discover-02/archive/refs/heads/main.zip), depois seguir a partir do segundo passo da instalação.
 
 ## :memo: Licença
 
