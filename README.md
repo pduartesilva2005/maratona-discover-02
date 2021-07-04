@@ -41,7 +41,7 @@ O JobsCalc é uma aplicação de estimativa de cálculo para projetos freelancer
 
 Para começar executar esse projeto você precisa ter o Node.js e o Git instalado na suá maquina
 
-- 1 - Clone esse repositório `git clone https://github.com/maratona-discover-02.git`;
+- 1 - Clone esse repositório `git clone https://github.com/pduartesilva2005/maratona-discover-02.git`;
 - 2 - Instalar as Dependências com `yarn` ou `npm install`;
 - 3 - Iniciar o Banco de Dados `yarn db:init` ou `npm run db:init`;
 - 4 - Rodar o projeto rodando esse comandos `yarn dev` ou `npm run dev`
